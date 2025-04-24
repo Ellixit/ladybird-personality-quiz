@@ -5,18 +5,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personality Quiz</title>
+  <title>Ladybird Personality Quiz</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Personality Quiz</h1>
-  <div id="quiz-container">
+  <h1>Ladybird Personality Quiz</h1>
+  <div class="quiz-container" id="quiz-container">
     <div class="question" id="question"></div>
     <div id="options"></div>
   </div>
   <div class="result" id="result"></div>
+
+  <p onclick="window.location.reload();" id="retry-button"> Retry Quiz </p>
 
   <script src="script.js"></script>
 
