@@ -64,9 +64,10 @@ function showResult() {
     const resultContainer = document.getElementById("result");
     resultContainer.innerHTML = `
         <div>
-            <img src="resources/${name}-image.png" alt="${name}" style="max-width: 20%; height: auto; border-radius: 15px;">
+            <img src="resources/${name}-image.png" alt="${name}" class="result-image">
         </div>
-        You are most like <strong>${name}</strong>!<br><br>
+        <h3>You are most like ${name}!</h3>
+        <p>You are very stinky!</p>
     `;
 
     const retryButton = document.getElementById("retry-button");

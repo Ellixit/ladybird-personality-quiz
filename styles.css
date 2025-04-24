@@ -1,29 +1,49 @@
+:root {
+    --grey: #181818;
+    --beige: #EBE8DB;
+    --highlight: #cac7ba;
+    --light-pink: #f0e5e7;
+    --medium-pink: #883e52;
+    --dark-pink: #6e0f29;
+    --purple: #3D0301; 
+  }
+html {
+    background-color: var(--beige);
+}
 body {
     font-family: "Montserrat", system-ui;
     margin: 0;
     padding: 20px;
     text-align: center;
+    color: var(--grey);
 }
 h2 {
-    color: #007e3b;
+    color: var(--purple);
+    margin: 10px;
+}
+h3 {
+    color: var(--dark-pink);
+    margin: 10px;
 }
 
 #start-button, #retry-button {
     display: none;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 10px;
     border-radius: 15px;
     align-items: center;
     width: 30vw;
-    border: 3px solid #007e3b;
-    color: #007e3b;
+    border: 3px solid var(--purple);
+    color: var(--purple);
+    font-weight: bold;
+    background-color: white;
 }
 #start-button {
     display: block;
 }
 #start-button:hover, #retry-button:hover {
     cursor: pointer;
-    background-color: #eeeeee;
+    background-color: var(--highlight);
 }
 #start-container {
     width: 50vw;
@@ -31,6 +51,7 @@ h2 {
 }
 #home-poster {
     width: 15vw;
+    margin: 10px;
 }
 
 .quiz-container {
@@ -38,14 +59,15 @@ h2 {
     flex-direction: column;
     margin: 20px auto;
     width: 50vw;
-    border: 3px solid green;
+    border: 3px solid var(--purple);
     border-radius: 20px;
     padding: 15px;
+    background-color: var(--light-pink);
 }
 .question {
     margin-bottom: 20px;
     font-weight: bold;
-    color: #007e3b;
+    color: var(--purple);
 }
 #options {
     display: flex;
@@ -55,17 +77,23 @@ h2 {
 .option-button {
     padding: 8px;
     width: 90%;
+    border: 2px solid var(--purple);
     border-radius: 15px;
     font-weight: bold;
+    color: var(--purple);
 }
 .option-button:hover {
     cursor: pointer;
-    background-color: #d6d6d6;
+    color: white;
+    background-color: var(--medium-pink);
 }
 
-.result {
-    font-size: 1.2em;
-    font-weight: bold;
+.result-image {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 4px solid var(--dark-pink); 
 }
 
 @media (max-width: 775px), (max-height: 450px)  {
