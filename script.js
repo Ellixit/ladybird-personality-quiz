@@ -55,16 +55,29 @@ function handleAnswer(scoreName) {
 }
 
 function showResult() {
-    const resultContainer = document.getElementById("result");
     const quizContainer = document.getElementById("quiz-container");
     quizContainer.style.display = "none";
 
     const highest = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b);
-    resultContainer.innerText = `You are most like ${highest[0]}!`;
+    const name = highest[0];
+
+    const resultContainer = document.getElementById("result");
+    resultContainer.innerHTML = `
+        <div>
+            <img src="resources/${name}-image.png" alt="${name}" style="max-width: 20%; height: auto; border-radius: 15px;">
+        </div>
+        You are most like <strong>${name}</strong>!<br><br>
+    `;
 
     const retryButton = document.getElementById("retry-button");
     retryButton.style.display = "block";
 }
 
-showQuestion();
-  
+window.onload = () => {
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("start-button").onclick = () => {
+        document.getElementById("start-container").style.display = "none";
+        document.getElementById("quiz-container").style.display = "block";
+        showQuestion();
+    };
+};

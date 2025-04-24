@@ -5,9 +5,28 @@ body {
     padding: 20px;
     text-align: center;
 }
-h1 {
+h2 {
     color: #007e3b;
 }
+
+#start-button, #retry-button {
+    display: none;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    width: 30vw;
+    border: 3px solid #007e3b;
+    color: #007e3b;
+}
+#start-button {
+    display: block;
+}
+#start-button:hover, #retry-button:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
 .quiz-container {
     display: flex;
     flex-direction: column;
@@ -37,20 +56,8 @@ h1 {
     cursor: pointer;
     background-color: #d6d6d6;
 }
+
 .result {
     font-size: 1.2em;
     font-weight: bold;
-}
-#retry-button {
-    display: none;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 15px;
-    align-items: center;
-    width: 30vw;
-    border: 3px solid #007e3b;
-    color: #007e3b;
-}
-#retry-button:hover{
-    cursor: pointer;
 }
