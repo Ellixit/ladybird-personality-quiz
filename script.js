@@ -1,0 +1,59 @@
+const questions = [
+{ question: "What is your favorite color?", options: [
+    { text: "Red", score: "Alice" },
+    { text: "Yellow", score: "Bob" },
+    { text: "Green", score: "Carol" },
+    { text: "Blue", score: "Dave" }
+    ]
+},
+{ question: "Which season do you prefer?", options: [
+    { text: "Summer", score: "Alice" },
+    { text: "Spring", score: "Bob" },
+    { text: "Autumn", score: "Carol" },
+    { text: "Winter", score: "Dave" },
+    ]
+},
+// Add more questions here
+];
+
+let currentQuestion = 0;
+const scores = { Alice: 0, Bob: 0, Carol: 0, Dave: 0 };
+
+function showQuestion() {
+const q = questions[currentQuestion];
+document.getElementById("question").innerText = q.question;
+const optionsContainer = document.getElementById("options");
+optionsContainer.innerHTML = "";
+
+q.options.forEach((option) => {
+    const btn = document.createElement("button");
+    btn.innerText = option.text;
+    btn.onclick = () => handleAnswer(option.score);
+    btn.style.display = "block";
+    btn.style.marginBottom = "10px";
+    optionsContainer.appendChild(btn);
+});
+}
+
+function handleAnswer(scoreName) {
+scores[scoreName]++;
+currentQuestion++;
+
+if (currentQuestion < questions.length) {
+    showQuestion();
+} else {
+    showResult();
+}
+}
+
+function showResult() {
+const resultContainer = document.getElementById("result");
+const quizContainer = document.getElementById("quiz-container");
+quizContainer.style.display = "none";
+
+const highest = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b);
+resultContainer.innerText = `You are most like ${highest[0]}!`;
+}
+
+showQuestion();
+  
