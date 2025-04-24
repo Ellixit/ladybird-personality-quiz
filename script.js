@@ -1,15 +1,9 @@
-const questions = [
-{ question: "What's your favorite animal?", options: [
-    { text: "Dog", score: ["Alice", "Dave"] },
-    { text: "Cat", score: ["Bob"] },
-    { text: "Cow", score: ["Carol"] },
-    { text: "Horse", score: ["Alice"] }
-]}
-// Add more questions here
-];
-
 let currentQuestion = 0;
-const scores = { Alice: 0, Bob: 0, Carol: 0, Dave: 0 };
+const scores = {};
+for (const id in characterMap) {
+  scores[characterMap[id]] = 0;
+}
+
 
 function showQuestion() {
     const q = questions[currentQuestion];
@@ -28,9 +22,12 @@ function showQuestion() {
     });
 }
 
-function handleAnswer(scoreNames) {
-    scoreNames.forEach(name => {
+function handleAnswer(scoreIds) {
+    scoreIds.forEach(id => {
+        const name = characterMap[id];
+        if (name) {
         scores[name]++;
+        }
     });
 
     currentQuestion++;
