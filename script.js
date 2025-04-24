@@ -36,7 +36,10 @@ function showQuestion() {
         const btn = document.createElement("button");
         btn.classList.add("option-button")
         btn.innerText = option.text;
-        btn.onclick = () => handleAnswer(option.score);
+        btn.onclick = () => {
+            handleAnswer(option.score);
+            btn.blur();
+        }
         btn.style.display = "block";
         btn.style.marginBottom = "10px";
         optionsContainer.appendChild(btn);
