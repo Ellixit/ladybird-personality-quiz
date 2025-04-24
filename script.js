@@ -36,9 +36,7 @@ function showQuestion() {
         const btn = document.createElement("button");
         btn.classList.add("option-button")
         btn.innerText = option.text;
-        btn.onclick = () => {
-            setTimeout(() => handleAnswer(option.score), 50);
-        }
+        btn.onclick = () => handleAnswer(option.score);
         btn.style.display = "block";
         btn.style.marginBottom = "10px";
         optionsContainer.appendChild(btn);
@@ -84,3 +82,9 @@ window.onload = () => {
         showQuestion();
     };
 };
+
+document.querySelectorAll('.option-button').forEach(button => {
+    button.addEventListener('touchend', () => {
+        button.blur();
+    });
+});
