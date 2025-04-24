@@ -29,20 +29,17 @@ const scores = { Alice: 0, Bob: 0, Carol: 0, Dave: 0 };
 function showQuestion() {
     const q = questions[currentQuestion];
     document.getElementById("question").innerText = q.question;
-
     const optionsContainer = document.getElementById("options");
-    const newOptionsContainer = optionsContainer.cloneNode(false);
-    optionsContainer.parentNode.replaceChild(newOptionsContainer, optionsContainer);
+    optionsContainer.innerHTML = "";
 
-    // ✅ Append to the new container, not the old one
     q.options.forEach((option) => {
         const btn = document.createElement("button");
-        btn.classList.add("option-button");
+        btn.classList.add("option-button")
         btn.innerText = option.text;
         btn.onclick = () => handleAnswer(option.score);
         btn.style.display = "block";
         btn.style.marginBottom = "10px";
-        newOptionsContainer.appendChild(btn);  // <- use new container
+        optionsContainer.appendChild(btn);
     });
 }
 
