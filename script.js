@@ -37,8 +37,7 @@ function showQuestion() {
         btn.classList.add("option-button")
         btn.innerText = option.text;
         btn.onclick = () => {
-            handleAnswer(option.score);
-            btn.blur();
+            setTimeout(() => handleAnswer(option.score), 50);
         }
         btn.style.display = "block";
         btn.style.marginBottom = "10px";
