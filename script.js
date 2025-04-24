@@ -1,25 +1,10 @@
 const questions = [
-{ question: "What is your favorite color?", options: [
-    { text: "Red", score: "Alice" },
-    { text: "Yellow", score: "Bob" },
-    { text: "Green", score: "Carol" },
-    { text: "Blue", score: "Dave" }
-    ]
-},
-{ question: "Which season do you prefer?", options: [
-    { text: "Summer", score: "Alice" },
-    { text: "Spring", score: "Bob" },
-    { text: "Autumn", score: "Carol" },
-    { text: "Winter", score: "Dave" }
-    ]
-},
 { question: "What's your favorite animal?", options: [
-    { text: "Dog", score: "Alice" },
-    { text: "Cat", score: "Bob" },
-    { text: "Cow", score: "Carol" },
-    { text: "Horse", score: "Dave" }
-    ]
-},
+    { text: "Dog", score: ["Alice", "Dave"] },
+    { text: "Cat", score: ["Bob"] },
+    { text: "Cow", score: ["Carol"] },
+    { text: "Horse", score: ["Alice"] }
+]}
 // Add more questions here
 ];
 
@@ -43,8 +28,11 @@ function showQuestion() {
     });
 }
 
-function handleAnswer(scoreName) {
-    scores[scoreName]++;
+function handleAnswer(scoreNames) {
+    scoreNames.forEach(name => {
+        scores[name]++;
+    });
+
     currentQuestion++;
 
     if (currentQuestion < questions.length) {
