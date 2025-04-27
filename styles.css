@@ -33,7 +33,7 @@ h3 {
     border-radius: 15px;
     align-items: center;
     width: 30vw;
-    border: 3px solid var(--purple);
+    border: 3px solid var(--dark-pink);
     color: var(--purple);
     font-weight: bold;
     background-color: white;
@@ -88,16 +88,23 @@ h3 {
     background-color: var(--medium-pink);
 }
 
+.result-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    margin-bottom: 0px;;
+    width: 50vw;
+}
 .result-image {
     width: 20vw;
     height: 20vw;
     object-fit: cover; 
     border-radius: 50%; 
-    border: 4px solid var(--dark-pink); 
+    border: 6px solid var(--dark-pink); 
 }
 
 @media (max-width: 775px), (max-height: 450px)  {
-    #start-container, .quiz-container {
+    #start-container, .quiz-container, .result-container {
         width: 80vw;
     }
     #home-poster {

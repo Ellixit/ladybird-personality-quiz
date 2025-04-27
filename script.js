@@ -45,14 +45,15 @@ function showResult() {
 
     const highest = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b);
     const name = highest[0];
+    const explanation = descriptions[name]
 
     const resultContainer = document.getElementById("result");
     resultContainer.innerHTML = `
         <div>
-            <img src="resources/${name}-image.png" alt="${name}" class="result-image">
+            <img src="resources/${name}.jpg" alt="${name}" class="result-image">
         </div>
         <h3>You are most like ${name}!</h3>
-        <p>You are very stinky!</p>
+        <p>${explanation}</p>
     `;
 
     const retryButton = document.getElementById("retry-button");
