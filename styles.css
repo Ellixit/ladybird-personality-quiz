@@ -110,4 +110,8 @@ h3 {
     #home-poster {
         width: 30vw;
     }
+    .result-image {
+        width: 60vw;
+        height: 60vw;
+    }
 }
