@@ -3,7 +3,7 @@
     --beige: #EBE8DB;
     --highlight: #cac7ba;
     --light-pink: #f0e5e7;
-    --medium-pink: #883e52;
+    --medium-pink: #f0cdd6;
     --dark-pink: #6e0f29;
     --purple: #3D0301; 
   }
@@ -84,7 +84,6 @@ h3 {
 }
 .option-button:hover {
     cursor: pointer;
-    color: white;
     background-color: var(--medium-pink);
 }
 
