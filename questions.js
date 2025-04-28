@@ -3,7 +3,7 @@ const characterMap = {
     2: "Marion McPherson",
     3: "Jenna Walton",
     4: "Danny O'Neill",
-    5: "Jules Steffans",
+    5: "Julie Steffans",
     6: "Lenny McPherson",
     7: "Kyle Scheible"
 };
@@ -13,7 +13,7 @@ const descriptions = {
     "Marion McPherson": "You are prideful, driven, and intelligent. Your sense of humor may lean towards the dry side, but that does not mean you cannot crack everyone up! You want the best for others but may struggle with expressing your feelings at times.",
     "Jenna Walton": "You are a trendsetter and trailblazer! Living in the moment is easy for you, as you are a fearless explorer. Like Jenna, you value honesty and may find yourself being image-conscious at times.",
     "Danny O'Neill": "You are insightful, reserved, and compassionate. You may feel as though you need to hide your true self to keep up with society's expectations, but the real you is accepted by more people than you know.",
-    "Jules Steffans": "You are adaptable, friendly, expressive. Despite being relatively easygoing, you aren't afraid to say what you need to say at times. ",
+    "Julie Steffans": "You are adaptable, friendly, expressive. Despite being relatively easygoing, you aren't afraid to say what you need to say at times. ",
     "Lenny McPherson": "You are self-determined, contemplative, and caring. You often put the needs of others before your own. Be careful to not let yourself fade into the background when helping others.",
     "Kyle Scheible": "You are down to earth, reserved, and nonchalant. You are not afraid to speak your mind and push others to challenge their thought processes. However, your chill attitude may only take you so far."
 }
