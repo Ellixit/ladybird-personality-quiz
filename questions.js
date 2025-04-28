@@ -94,6 +94,12 @@ const descriptions = {
         { text: "Scream", score: [1] },
         { text: "Take it out on someone else", score: [2] }
     ]},
+    { question: "If you could have any superpower, what would it be?", options: [
+        { text: "Invisibility", score: [4] },
+        { text: "Super Speed", score: [2] },
+        { text: "Mind Reading", score: [1, 3] },
+        { text: "Flying", score: [6] }
+    ]},
     { question: "What is your ideal afternoon activity?", options: [
         { text: "Browsing open houses", score: [2, 1] },
         { text: "Practice an instrument", score: [7] },
