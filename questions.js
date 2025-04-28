@@ -14,7 +14,7 @@ const descriptions = {
     "Jenna Walton": "You are a trendsetter and trailblazer! Living in the moment is easy for you, as you are a fearless explorer. Like Jenna, you value honesty and may find yourself being image-conscious at times.",
     "Danny O'Neill": "You are insightful, reserved, and compassionate. You may feel as though you need to hide your true self to keep up with society's expectations, but the real you is accepted by more people than you know.",
     "Jules Steffans": "You are adaptable, friendly, expressive. Despite being relatively easygoing, you aren't afraid to say what you need to say at times. ",
-    "Lenny McPherson": "meowes likes a cat",
+    "Lenny McPherson": "You are self-determined, contemplative, and caring. You often put the needs of others before your own. Be careful to not let yourself fade into the background when helping others.",
     "Kyle Scheible": "You are down to earth, reserved, and nonchalant. You are not afraid to speak your mind and push others to challenge their thought processes. However, your chill attitude may only take you so far."
 }
 
@@ -23,7 +23,7 @@ const descriptions = {
         { text: "Reinventing yourself", score: [1] },
         { text: "Creating a stable life for yourself", score: [2] },
         { text: "Gaining fame", score: [3] },
-        { text: "Breaking free from my parent's expectations", score: [4, 1] },
+        { text: "Breaking free from my parent's expectations", score: [4, 7] },
         { text: "Being happy", score: [5, 6] }
     ]},
     { question: "Your friends would describe you as:", options: [
@@ -35,49 +35,51 @@ const descriptions = {
     ]},
     { question: "What is your favorite coming of age film?", options: [
         { text: "Real Women Have Curves", score: [5] },
-        { text: "The Breakfast Club", score: [1] },
+        { text: "The Breakfast Club", score: [6] },
         { text: "Clueless", score: [3] },
         { text: "Bye Bye Birdie", score: [4] },
         { text: "American Graffiti", score: [7] }
     ]},
     { question: "What is your biggest fear?", options: [
-        { text: "Losing control", score: [2] },
-        { text: "Being stuck in one place forever", score: [1] },
+        { text: "Losing control", score: [2, 3] },
+        { text: "Being stuck in one place forever", score: [1, 7] },
         { text: "Being alone", score: [5, 6] },
         { text: "Hiding my true identity", score: [4] }
     ]},
     { question: "What makes you angry?", options: [
         { text: "Lying", score: [3] },
         { text: "Being doubted", score: [1] },
-        { text: "Conforming to expectations", score: [7, 1] },
+        { text: "Conforming to expectations", score: [1, 4, 7] },
         { text: "Disrespect", score: [2] },
         { text: "Being left out", score: [5] }
     ]},
     { question: "What makes you laugh the most?", options: [
         { text: "Making fun of yourself", score: [5] },
-        { text: "Dry humor", score: [2, 1] },
+        { text: "Dry humor", score: [2, 1, 7] },
         { text: "A revenge prank", score: [3] },
         { text: "A comedic show", score: [4, 6] }
     ]},
     { question: "What stresses you out the most?", options: [
-        { text: "Financial constraints", score: [] },
-        { text: "Not knowing what you are going to do in the future", score: [] }
+        { text: "Financial constraints", score: [2, 6] },
+        { text: "Not knowing what you are going to do in the future", score: [4] },
+        { text: "Demanding workloads", score: [5, 7] },
+        { text: "Relationship issues", score: [3] }
     ]},
-    { question: "What modern singer do you enjoy the most?", options: [
+    { question: "What singer do you enjoy the most?", options: [
         { text: "Glee Cast", score: [5] },
         { text: "The Strokes", score: [7] },
         { text: "Dear Evan Hansen Broadway Cast", score: [4] },
-        { text: "Olivia Rodrigo", score: [1] },
-        { text: "Billy Joel", score: [2] }
+        { text: "Olivia Rodrigo", score: [1, 3] },
+        { text: "Billy Joel", score: [2, 6] }
     ]},
     { question: "How do you handle conflicts with others?", options: [
         { text: "Keep it bottled up inside", score: [4, 6] },
         { text: "Shrug it off and move on", score: [3, 7] },
-        { text: "Directly confronting the other person", score: [1, 2] }
+        { text: "Directly confronting the other person", score: [1, 2, 5] }
     ]},
     { question: "How do you make major life decisions?", options: [
         { text: "Based on my head", score: [2, 3] },
-        { text: "Based on my heart", score: [1, 6] },
+        { text: "Based on my heart", score: [1, 6, 7] },
         { text: "Based on others", score: [4, 5] }
     ]},
     { question: "How do you respond to criticism?", options: [
@@ -88,7 +90,7 @@ const descriptions = {
     ]},
     { question: "How do you handle stress?", options: [
         { text: "Talking it out with friends or family", score: [6] },
-        { text: "Express it creatively", score: [4, 5] },
+        { text: "Express it creatively", score: [4, 5, 7] },
         { text: "Scream", score: [1] },
         { text: "Take it out on someone else", score: [2] }
     ]},
